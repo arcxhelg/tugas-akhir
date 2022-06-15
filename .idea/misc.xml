@@ -11,11 +11,14 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_sent_messages.xml" value="0.178125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_sign_up.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_message.xml" value="0.21" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_received_message.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_sent_message.xml" value="0.232421875" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/fragment_file_chooser.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/messages_list_layout.xml" value="0.18" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
