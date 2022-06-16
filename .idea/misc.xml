@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_compose.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_email.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_fullname.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_inbox.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_password.xml" value="0.1275" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_username.xml" value="0.1275" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_login.xml" value="0.17" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_main2.xml" value="0.2265625" />
@@ -14,7 +22,10 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_received_message.xml" value="0.2265625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_sent_message.xml" value="0.232421875" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/fragment_file_chooser.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/fragment_new_message.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/messages_list_layout.xml" value="0.18" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/drawer_menu.xml" value="0.2265625" />
       </map>
     </option>
   </component>

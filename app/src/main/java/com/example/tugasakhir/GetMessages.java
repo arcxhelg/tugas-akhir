@@ -2,7 +2,6 @@ package com.example.tugasakhir;
 
 public class GetMessages {
 
-    public static String getSenderEmail;
     private String sender_email, receiver_email, email_subject, email_message, email_datetime;
 
     public GetMessages(String sender_email, String receiver_email, String email_subject, String email_message, String email_datetime) {

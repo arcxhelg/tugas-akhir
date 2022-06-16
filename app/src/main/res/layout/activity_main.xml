@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/layout_drawer"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/messageInput"
+<!--    tools:openDrawer="start"-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter message"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/keyInput"
-        android:layout_below="@id/messageInput"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TEST" />
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:elevation="5dp" />-->
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/fragment_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter encryption key"/>
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"/>
 
-    <Button
-        android:id="@+id/encryptButton"
-        android:layout_below="@id/keyInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Encrypt"/>
-
-    <Button
-        android:id="@+id/decryptButton"
-        android:layout_below="@id/encryptButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Decrypt"/>
-
-    <TextView
-        android:id="@+id/outputMessage"
-        android:layout_below="@id/decryptButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

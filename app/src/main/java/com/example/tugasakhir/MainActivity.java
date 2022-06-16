@@ -1,114 +1,110 @@
 package com.example.tugasakhir;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Base64;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
+import com.google.android.material.navigation.NavigationView;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText messageInput, keyInput;
-    TextView outputMessage;
-    Button encryptButton, decryptButton;
-    String outputString;
+//    TextView txt_username, txt_email;
+//    public DrawerLayout drawer;
+//    public ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        messageInput = (EditText) findViewById(R.id.messageInput);
-        keyInput = (EditText) findViewById(R.id.keyInput);
-        outputMessage = (TextView) findViewById(R.id.outputMessage);
-        encryptButton = (Button) findViewById(R.id.encryptButton);
-        decryptButton = (Button) findViewById(R.id.decryptButton);
+//        txt_username = (TextView) findViewById(R.id.user_username);
+//        txt_email = (TextView) findViewById(R.id.user_email);
+//
+//        Intent intent = getIntent();
+//        String user_username = intent.getStringExtra("user_username");
+//
+//        if (intent != null) {
+//            txt_username.setText(user_username);
+//        }
+//
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        NavigationView navigationView = findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
 
-        encryptButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    outputString = encrypt (messageInput.getText().toString(), keyInput.getText().toString());
-                    outputMessage.setText(outputString);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        drawer = findViewById(R.id.layout_drawer);
+//        toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_open, R.string.navigation_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        decryptButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    outputString = decrypt (messageInput.getText().toString(), keyInput.getText().toString());
-                    outputMessage.setText(outputString);
-                } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Wrong Key", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                }
-            }
-        });
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NewMessageFragment()).commit();
+//            navigationView.setCheckedItem(R.id.nav_compose);
+//        }
 
     }
 
-    private String encrypt(String Data, String password) throws Exception {
-        SecretKeySpec key = generateKey(password);
-        Cipher c = Cipher.getInstance("AES");
-        c.init(Cipher.ENCRYPT_MODE, key);
-        byte[] encVal = c.doFinal(Data.getBytes());
-        String encyptedValue = Base64.encodeToString(encVal, Base64.DEFAULT);
-        return encyptedValue;
-    }
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.nav_compose:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NewMessageFragment()).commit();
+//                break;
+//            case R.id.nav_inbox:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReceivedMessages()).commit();
+//                break;
+//            case R.id.nav_compose:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SentMessages()).commit();
+//                break;
+//        }
+//
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 
-    private String decrypt(String outputString, String password) throws Exception {
-        SecretKeySpec key = generateKey(password);
-        Cipher c = Cipher.getInstance("AES");
-        c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decodedValue = Base64.decode(outputString, Base64.DEFAULT);
-        byte[] decVal = c.doFinal(decodedValue);
-        String decyptedValue = new String(decVal);
-        return decyptedValue;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (toggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
-    private SecretKeySpec generateKey(String password) throws Exception {
-        final MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        byte[] bytes = password.getBytes(StandardCharsets.UTF_8);
-        digest.update(bytes, 0, bytes.length);
-        byte[] key = digest.digest();
-        SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
-        return secretKeySpec;
-    }
-
-    public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(false);
-        builder.setMessage("Are you sure to exit the app?");
-        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
-            }
-        });
-        builder.setNegativeButton("Cancel" +
-                "", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
+//    public void onBackPressed() {
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setCancelable(false);
+//            builder.setMessage("Are you sure to exit the app?");
+//            builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    finishAffinity();
+//                }
+//            });
+//            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    dialog.cancel();
+//                }
+//            });
+//            AlertDialog alert = builder.create();
+//            alert.show();
+//        }
+//    }
 }
