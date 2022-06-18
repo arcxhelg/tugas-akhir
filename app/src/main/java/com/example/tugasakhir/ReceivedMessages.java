@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.android.volley.Request;
@@ -20,7 +21,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ReceivedMessages extends AppCompatActivity {
 
@@ -43,7 +46,7 @@ public class ReceivedMessages extends AppCompatActivity {
     }
 
     private void loadMessages() {
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -72,7 +75,18 @@ public class ReceivedMessages extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
             }
-        });
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+                SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+                String saved_email = sharedPreferences.getString("user_email", "");
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("receiver_email", saved_email);
+                return params;
+            }
+        };
 
         Volley.newRequestQueue(this).add(stringRequest);
     }
