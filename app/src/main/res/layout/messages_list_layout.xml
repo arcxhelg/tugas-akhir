@@ -27,11 +27,11 @@
 
     <TextView
         android:id="@+id/email_datetime"
-        android:text="MM / dd"
+        android:text="yyyy-mm-dd"
         android:textSize="15dp"
         android:fontFamily="@font/poppinsmedium"
         android:textColor="@color/black"
-        android:layout_width="85dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/sender_receiver_email"/>
 
