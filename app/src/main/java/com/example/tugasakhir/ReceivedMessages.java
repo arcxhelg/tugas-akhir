@@ -1,9 +1,12 @@
 package com.example.tugasakhir;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.android.volley.Request;
@@ -21,7 +24,7 @@ import java.util.List;
 
 public class ReceivedMessages extends AppCompatActivity {
 
-    private static final String URL = "https://tugasakhirwilliam.000webhostapp.com/get_messages.php";
+    private static final String URL = "https://tugasakhirwilliam.000webhostapp.com/received_messages_filter.php";
     private List<GetMessages> receivedMessageList;
     private RecyclerView recyclerView;
 
@@ -72,6 +75,29 @@ public class ReceivedMessages extends AppCompatActivity {
         });
 
         Volley.newRequestQueue(this).add(stringRequest);
+    }
+
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Do you want to back to main menu?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("Cancel" +
+                "", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
 }

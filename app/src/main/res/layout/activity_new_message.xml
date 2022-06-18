@@ -45,8 +45,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
             android:fontFamily="@font/poppinsmedium"
-            android:hint="insert receiver email"
-            android:inputType="textEmailAddress"
+            android:hint="insert sender email"
+            android:inputType="none"
+            android:textIsSelectable="true"
+            android:focusable="false"
             android:textSize="15dp"
             app:layout_constraintStart_toEndOf="@+id/textViewFrom"
             app:layout_constraintTop_toBottomOf="@+id/newMessageText" />

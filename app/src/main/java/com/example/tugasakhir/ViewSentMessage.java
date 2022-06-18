@@ -21,7 +21,6 @@ import javax.crypto.spec.SecretKeySpec;
 public class ViewSentMessage extends AppCompatActivity {
 
     EditText txt_receiver, txt_subject, txt_message, txt_key;
-    TextView textViewDecryptedMessage, decryptedMessage;
     String decryptedString;
     Button btn_Decrypt;
     ProgressBar progressBar;
@@ -35,8 +34,6 @@ public class ViewSentMessage extends AppCompatActivity {
         txt_subject = findViewById(R.id.txt_subject);
         txt_message = findViewById(R.id.txt_message);
         txt_key = findViewById(R.id.txt_key);
-        textViewDecryptedMessage = findViewById(R.id.textViewDecryptedMessage);
-        decryptedMessage = findViewById(R.id.decryptedMessage);
         btn_Decrypt = findViewById(R.id.btn_Decrypt);
         progressBar = findViewById(R.id.progress);
 
@@ -56,13 +53,10 @@ public class ViewSentMessage extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    textViewDecryptedMessage.setVisibility(View.VISIBLE);
-                    decryptedMessage.setVisibility(View.VISIBLE);
                     decryptedString = decrypt (txt_message.getText().toString(), txt_key.getText().toString());
-                    decryptedMessage.setText(decryptedString);
+                    txt_message.setText(decryptedString);
+                    btn_Decrypt.setVisibility(View.INVISIBLE);
                 } catch (Exception e) {
-                    textViewDecryptedMessage.setVisibility(View.INVISIBLE);
-                    decryptedMessage.setVisibility(View.INVISIBLE);
                     Toast.makeText(ViewSentMessage.this, "Wrong Key", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }

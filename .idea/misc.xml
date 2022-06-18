@@ -12,8 +12,12 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_password.xml" value="0.1275" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/drawable/ic_username.xml" value="0.1275" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_login.xml" value="0.17" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_main2.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.21" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_navigation_drawer_new_message.xml" value="0.21" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_navigation_drawer_received_messages.xml" value="0.11018237082066869" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_navigation_drawer_sent_messages.xml" value="0.11018237082066869" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_new_message.xml" value="0.21" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_received_messages.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_sent_messages.xml" value="0.178125" />
@@ -21,11 +25,33 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_message.xml" value="0.21" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_received_message.xml" value="0.2265625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/activity_view_sent_message.xml" value="0.232421875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.11018237082066869" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/app_bar_navigation_drawer_new_message.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/app_bar_navigation_drawer_received_messages.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/app_bar_navigation_drawer_sent_messages.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/content_navigation_drawer.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/content_navigation_drawer_new_message.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/content_navigation_drawer_received_messages.xml" value="0.2140625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/content_navigation_drawer_sent_messages.xml" value="0.2140625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/fragment_file_chooser.xml" value="0.2265625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/fragment_new_message.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/messages_list_layout.xml" value="0.18" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header_navigation_drawer_new_message.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header_navigation_drawer_received_messages.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/layout/nav_header_navigation_drawer_sent_messages.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/activity_main_drawer.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/activity_navigation_drawer_drawer.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/activity_navigation_drawer_new_message_drawer.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/activity_navigation_drawer_received_messages_drawer.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/activity_navigation_drawer_sent_messages_drawer.xml" value="0.2265625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/drawer_menu.xml" value="0.2265625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/navigation_drawer.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/navigation_drawer_new_message.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/navigation_drawer_received_messages.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/menu/navigation_drawer_sent_messages.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TugasAkhir/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1275" />
       </map>
     </option>
   </component>
