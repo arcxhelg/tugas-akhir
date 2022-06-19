@@ -65,14 +65,17 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
-        builder.setMessage("Are you sure to exit the app?");
-        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+        builder.setMessage("Do you want to logout?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                finishAffinity();
+                dialog.dismiss();
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Cancel" +
+                "", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

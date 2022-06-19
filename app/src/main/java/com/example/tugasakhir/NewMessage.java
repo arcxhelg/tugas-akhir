@@ -44,9 +44,9 @@ public class NewMessage extends AppCompatActivity {
         txt_subject = findViewById(R.id.txt_subject);
         txt_message = findViewById(R.id.txt_message);
         txt_key = findViewById(R.id.txt_key);
-        cryptedMessage = findViewById(R.id.cryptedMessage);
         btn_Send = findViewById(R.id.btn_Send);
         progressBar = findViewById(R.id.progress);
+        cryptedMessage = findViewById(R.id.cryptedMessage);
 
         loadData();
 
@@ -68,12 +68,6 @@ public class NewMessage extends AppCompatActivity {
                 email_message = String.valueOf(cryptedMessage.getText());
 
                 if (!sender_email.equals("") && !receiver_email.equals("") && !email_subject.equals("") && !email_message.equals("")) {
-
-                    if(!Patterns.EMAIL_ADDRESS.matcher(sender_email).matches()) {
-                        txt_sender.setError("Check email format!");
-                        txt_sender.requestFocus();
-                        return;
-                    }
 
                     if(!Patterns.EMAIL_ADDRESS.matcher(receiver_email).matches()) {
                         txt_receiver.setError("Check email format!");
