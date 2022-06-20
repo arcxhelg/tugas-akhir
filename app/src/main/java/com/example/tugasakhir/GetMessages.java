@@ -1,7 +1,6 @@
 package com.example.tugasakhir;
 
-public class
-GetMessages {
+public class GetMessages {
 
     private String sender_email, receiver_email, email_subject, email_message, email_datetime;
 
