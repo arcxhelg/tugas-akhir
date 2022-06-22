@@ -31,7 +31,7 @@
             android:textSize="18dp"
             android:fontFamily="@font/poppinsbold"
             android:text="User Email"
-            android:textColor="@color/blue1"
+            android:textColor="@color/blue2"
             app:layout_constraintTop_toBottomOf="@+id/welcome"
             tools:layout_editor_absoluteX="30dp" />
 

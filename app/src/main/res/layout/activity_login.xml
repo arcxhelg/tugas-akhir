@@ -91,7 +91,7 @@
             android:textSize="18dp"
             android:fontFamily="@font/poppinsmedium"
             android:text="Create Account"
-            android:textColor="@color/blue1"
+            android:textColor="@color/blue2"
             tools:layout_editor_absoluteX="30dp"
             app:layout_constraintTop_toTopOf="@+id/btn_Login" />
 
