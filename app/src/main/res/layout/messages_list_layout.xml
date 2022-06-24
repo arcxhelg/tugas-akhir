@@ -2,45 +2,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingHorizontal="30dp"
-    android:paddingTop="20dp"
-    android:id="@+id/message_container">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/sender_receiver_email"
-        android:text="Sender / Receiver Email"
-        android:textSize="15dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:textColor="@color/black"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/email_subject"
-        android:text="Email Subject"
-        android:textSize="15dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:textColor="@color/black"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sender_receiver_email"/>
-
-    <TextView
-        android:id="@+id/email_datetime"
-        android:text="yyyy-mm-dd"
-        android:textSize="15dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:textColor="@color/black"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/sender_receiver_email"/>
-
-    <View
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/blue2"
-        android:layout_below="@id/email_datetime" />
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:layout_marginBottom="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/message_container" >
+
+        <TextView
+            android:id="@+id/email_datetime"
+            android:text="yyyy-mm-dd"
+            android:textSize="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sender_receiver_email"
+            android:text="Sender / Receiver Email"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/email_datetime"/>
+
+        <TextView
+            android:id="@+id/email_subject"
+            android:text="Email Subject"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/email_datetime"
+            android:layout_below="@id/sender_receiver_email" />
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

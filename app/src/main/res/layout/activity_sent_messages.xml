@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="55dp"
-        android:layout_below="@id/sentMessagesText"/>
+        android:layout_below="@id/sentMessagesText"
+        tools:listitem="@layout/messages_list_layout" />
 
 </RelativeLayout>
