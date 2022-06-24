@@ -22,6 +22,7 @@ public class SignUp extends AppCompatActivity {
     EditText txt_fullname, txt_username, txt_email, txt_password;
     Button btn_SignUp;
     ProgressBar progressBar;
+    String URL = "https://tugasakhirwilliam.000webhostapp.com/signup.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +80,7 @@ public class SignUp extends AppCompatActivity {
                             data[2] = email;
                             data[3] = password;
 
-                            PutData putData = new PutData("https://tugasakhirwilliam.000webhostapp.com/signup.php", "POST", field, data);
+                            PutData putData = new PutData(URL, "POST", field, data);
 
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

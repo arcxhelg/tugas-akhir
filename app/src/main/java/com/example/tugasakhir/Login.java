@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +25,7 @@ public class Login extends AppCompatActivity {
     Button btn_Login;
     TextView createAccount;
     ProgressBar progressBar;
+    String URL = "https://tugasakhirwilliam.000webhostapp.com/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,12 @@ public class Login extends AppCompatActivity {
 
                 if (!email.equals("") && !password.equals("")) {
 
+                    if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                        txt_emailLogin.setError("Check email format!");
+                        txt_emailLogin.requestFocus();
+                        return;
+                    }
+
                     progressBar.setVisibility(View.VISIBLE);
 
                     Handler handler = new Handler(Looper.getMainLooper());
@@ -73,7 +81,7 @@ public class Login extends AppCompatActivity {
                             data[0] = email;
                             data[1] = password;
 
-                            PutData putData = new PutData("https://tugasakhirwilliam.000webhostapp.com/login.php", "POST", field, data);
+                            PutData putData = new PutData(URL, "POST", field, data);
 
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

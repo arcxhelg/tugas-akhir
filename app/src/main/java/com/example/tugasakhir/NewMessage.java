@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
@@ -33,6 +34,7 @@ public class NewMessage extends AppCompatActivity {
     String cryptedString;
     Button btn_Send;
     ProgressBar progressBar;
+    String URL = "https://tugasakhirwilliam.000webhostapp.com/send_message.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +97,7 @@ public class NewMessage extends AppCompatActivity {
                             data[2] = email_subject;
                             data[3] = email_message;
 
-                            PutData putData = new PutData("https://tugasakhirwilliam.000webhostapp.com/send_message.php", "POST", field, data);
+                            PutData putData = new PutData(URL, "POST", field, data);
 
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
